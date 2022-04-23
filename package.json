@@ -1,0 +1,22 @@
+{
+  "name": "api-proyecto-senpai",
+  "version": "1.0.0",
+  "description": "API Proyecto Senpai",
+  "main": "index.js",
+  "scripts": { 
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/macadema/API-Proyecto-Senpai.git"
+  },
+  "author": "Mariano Camacho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/macadema/API-Proyecto-Senpai/issues"
+  },
+  "homepage": "https://github.com/macadema/API-Proyecto-Senpai#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
