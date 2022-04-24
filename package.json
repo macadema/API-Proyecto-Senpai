@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "API Proyecto Senpai",
   "main": "index.js",
-  "scripts": { 
+  "scripts": {
     "start": "node src/index.js"
   },
   "repository": {
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/macadema/API-Proyecto-Senpai#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.3"
   }
 }
