@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/macadema/API-Proyecto-Senpai#readme",
   "dependencies": {
+    "body-parser": "^1.20.0",
     "cors": "^2.8.5",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "multer": "^1.4.4"
   }
 }
