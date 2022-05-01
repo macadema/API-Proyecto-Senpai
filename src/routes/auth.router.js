@@ -1,24 +1,19 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
-//const jwt = require("jsonwebtoken");
+const jwt = require("jsonwebtoken");
 
-//Requerir la palabra clave
-//const { JWT_SECRET } = require("./../middlewares/auth.middleware");
+//Requerir mi jwt-secret
+const { JWT_SECRET } = require("./../middlewares/auth.middleware");
 
 //Creamos el router
 const authRouter = express.Router();
 
-/*
 const usuarios = [
   {
-    email: "hola@senpai.com",
-    password: "$2b$10$ZJSov0lFNDKgz4Z4Ug0jT.Q6lXh6VkfpRCKhmbScRD2DnkK4nujBK",
+    email: "sofia@sophieinteriores.com",
+    password: "contrasenaencryptada",
   },
-  {
-    email: "chau@senpai.com",
-    password: "passwordencriptadoamanogracias",
-  },
-];
+  ];
 
 authRouter.post("/login", async (request, response) => {
   const email = request.body.email;
@@ -29,10 +24,10 @@ authRouter.post("/login", async (request, response) => {
     return usarioBD.email === email;
   });
 
-  //Error si el usuario no existe
+  //Sii el usuario no existe: Muestro error
   if (!usuario) {
     return response.status(400).send({
-      error: "¡Usuario no encontrado!",
+      error: "El usuario ingresado no existe. POr favor intenta de nuevo",
     });
   }
 
@@ -40,11 +35,11 @@ authRouter.post("/login", async (request, response) => {
   const esIgualPassword = await bcrypt.compare(password, usuario.password);
   if (!esIgualPassword) {
     return response.status(400).send({
-      error: "¡La clave no es correcta!",
+      error: "La contrasena no es correcta. Por favor intenta de nuevo",
     });
   }
 
-  //Generar un jwt ya que sabemos que el usuario es autenticado
+  //SI el usuario se autentica: Generar un jwt
   const token = jwt.sign(
     {
       email: usuario.email,
@@ -61,5 +56,3 @@ authRouter.post("/login", async (request, response) => {
 });
 
 module.exports = authRouter;
-
-*/
