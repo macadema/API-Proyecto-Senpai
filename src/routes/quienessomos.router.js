@@ -1,9 +1,15 @@
 const express = require("express");
+const Empresa = require("../models/infoEmpresa");
+
 const quienesSomosRouter = express.Router();
 
 //ENDPOINT QUIENES SOMOS
-quienesSomosRouter.get("/quienessomospage", (req, res) => {
-    const infoEmpresa = [
+quienesSomosRouter.get("/quienessomospage", async (req, res) => {
+    const infoEmpresa = await eachInfo.findAll();
+    response.send(infoEmpresa);
+  }); 
+    
+/*    [
         {
         id: "1",
         titulo: "Acerca de",
@@ -26,6 +32,6 @@ quienesSomosRouter.get("/quienessomospage", (req, res) => {
         
     res.send(infoEmpresa);
 
-});
+});*/
 
 module.exports = quienesSomosRouter;

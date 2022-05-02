@@ -5,7 +5,7 @@ const cors = require("cors");
 const path = require("path");
 
 //Levantar variables de entorno
-//require("dotenv").config();
+require("dotenv").config();
 
 //Creamos nuestra API
 const api = express();
